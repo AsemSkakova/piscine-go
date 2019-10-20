@@ -1,1 +1,1 @@
-ls --almost -all -A -m -t -p | sed 's/ //g'
+ls -c -A -m -p | sed 's/ //g'
