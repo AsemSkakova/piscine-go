@@ -5,20 +5,26 @@ import (
 )
 
 func PrintComb() {
-	//var aString string = "0123456789"
-	for i := 48; i <= 55; i++ {
-		for j := 49; j <= 56; j++ {
-			for k := 50; k <= 57; k++ {
+	var a rune = 48
+	var b rune = 49
+	var c rune = 50
+	for i := a; i <= 54; i++ {
+		for j := b; j <= 55; j++ {
+			for k := c; k <= 56; k++ {
 				if i < j && j < k {
-					z01.PrintRune(rune(i))
-					z01.PrintRune(rune(j))
-					z01.PrintRune(rune(k))
+					z01.PrintRune(i)
+					z01.PrintRune(j)
+					z01.PrintRune(k)
+					z01.PrintRune(',')
 					z01.PrintRune(' ')
 				}
 			}
 
 		}
 	}
+	z01.PrintRune(55)
+	z01.PrintRune(56)
+	z01.PrintRune(57)
 	z01.PrintRune(10)
 
 }
