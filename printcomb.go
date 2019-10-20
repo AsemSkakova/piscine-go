@@ -5,14 +5,14 @@ import (
 )
 
 func PrintComb() {
-	var aString string = "0123456789"
-	for i := 0; i <= 7; i++ {
-		for j := 1; j <= 8; j++ {
-			for k := 2; k <= 9; k++ {
+	//var aString string = "0123456789"
+	for i := 48; i <= 55; i++ {
+		for j := 49; j <= 56; j++ {
+			for k := 50; k <= 57; k++ {
 				if i < j && j < k {
-					z01.PrintRune(rune(aString[i]))
-					z01.PrintRune(rune(aString[j]))
-					z01.PrintRune(rune(aString[k]))
+					z01.PrintRune(rune(i))
+					z01.PrintRune(rune(j))
+					z01.PrintRune(rune(k))
 					z01.PrintRune(' ')
 				}
 			}
