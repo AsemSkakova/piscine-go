@@ -16,7 +16,7 @@ func main() {
 		len = index + 1
 	}
 
-	for i := len; i >= 0; i-- {
+	for i := len - 1; i >= 1; i-- {
 		strAsRune := []rune(arguments[i])
 		for _, words := range strAsRune {
 			z01.PrintRune(words)
