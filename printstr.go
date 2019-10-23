@@ -11,5 +11,4 @@ func PrintStr(str string) {
 	for _, word := range []rune(str) {
 		z01.PrintRune(word)
 	}
-	z01.PrintRune('\n')
 }
