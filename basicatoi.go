@@ -3,11 +3,9 @@ package piscine
 func BasicAtoi(s string) int {
 
 	a := 0
-	ed := 0
-	aChange := []rune(s)
-
-	for _, letter := range aChange {
-		if letter >= 49 && letter <= 57 {
+	for _, letter := range s {
+		ed := 0
+		for i := '1'; i <= letter; i++ {
 			ed++
 		}
 		a = a*10 + ed
