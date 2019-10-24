@@ -1,17 +1,21 @@
 package piscine
 
 func IsPrintable(str string) bool {
-	sAsRune := []rune(str)
-	for _, letter := range sAsRune {
-		if checkPrint(letter) {
+
+	a := []rune(str)
+	for _, letter := range a {
+		if checkAlp(letter) == false {
 			return false
 		}
 	}
 	return true
+
 }
 
-func checkPrint(r rune) bool {
-	if r >= 0 && r <= 31 {
+func checkAlp(r rune) bool {
+	if r >= 'A' && r <= 'Z' ||
+		r >= 'a' && r <= 'z' ||
+		r >= '0' && r <= '9' {
 		return true
 	}
 	return false
