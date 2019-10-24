@@ -1,56 +1,47 @@
 package piscine
 
 func SplitWhiteSpaces(str string) []string {
-	//var word string
-	strRune := []rune(str)
-
-	count := 0
-
-	space := 0
-	var split []string
-	for i := range strRune {
-		count = i + 1
+	strAsRune := []rune(str)
+	len := 0
+	size := 0
+	for i := range strAsRune {
+		len = i + 1
 	}
-
-	if count > 0 && IsSep(strRune[0]) == false {
-		space++
-		for i := 0; i < count; i++ {
-			if IsSep(strRune[i]) == true {
-				if i+1 < count {
-					if IsSep(strRune[i+1]) == false {
-						space++
+	if len > 0 && IsSeparator(strAsRune[0]) == false {
+		size++
+		for i := 0; i < len; i++ {
+			if IsSeparator(strAsRune[i]) == true {
+				if i+1 < len {
+					if IsSeparator(strAsRune[i+1]) == false {
+						size++
 					}
 				}
 			}
 		}
 	}
-
-	split = make([]string, space)
-
+	answer := make([]string, size)
 	word := ""
 	index := 0
-	if count > 0 && IsSep(strRune[0]) == false {
-		for i := 0; i < count; i++ {
-			if IsSep(strRune[i]) == true {
-				if i+1 < count {
-					if IsSep(strRune[i+1]) == false {
-						split[index] = word
+	if len > 0 && IsSeparator(strAsRune[0]) == false {
+		for i := 0; i < len; i++ {
+			if IsSeparator(strAsRune[i]) == true {
+				if i+1 < len {
+					if IsSeparator(strAsRune[i+1]) == false {
+						answer[index] = word
 						index++
 						word = ""
 					}
 				}
 			} else {
-				word += string(strRune[i])
+				word += string(strAsRune[i])
 			}
 		}
-		split[space-1] = word
+		answer[size-1] = word
 	}
-
-	return split
-
+	return answer
 }
 
-func IsSep(r rune) bool {
+func IsSeparator(r rune) bool {
 	if r == ' ' || r == '\n' || r == '\t' {
 		return true
 	}
