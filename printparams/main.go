@@ -10,17 +10,12 @@ func main() {
 
 	arguments := os.Args
 
-	len := 0
+	a := []rune(arguments[i])
 
-	for index := range arguments {
-		len = index + 1
-	}
-
-	for i := 1; i < len; i++ {
-		strAsRune := []rune(arguments[i])
-		for _, words := range strAsRune {
-			z01.PrintRune(words)
+	for index, letter := range a {
+		if index > 0 {
+			z01.PrintRune[index]
 		}
-		z01.PrintRune('\n')
 	}
+
 }
