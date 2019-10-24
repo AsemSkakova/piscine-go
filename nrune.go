@@ -4,6 +4,14 @@ func NRune(s string, n int) rune {
 
 	a := []rune(s)
 
-	return a[n-1]
+	var nrune rune
+
+	for index, letter := range a {
+		if index == n-1 {
+			nrune = letter
+		}
+	}
+
+	return nrune
 
 }
