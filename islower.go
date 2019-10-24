@@ -1,31 +1,19 @@
 package piscine
 
 func IsLower(str string) bool {
-	sAsRune := []rune(str)
-	counter := 0
-	for _, letter := range sAsRune {
-		if checkAlplow(letter) {
-			counter++
+	a := []rune(str)
+	for _, letter := range a {
+		if checkLowerCase(letter) == false {
+			return false
 		}
 	}
-	if counter == StrLenAlplow(str) {
-		return true
-	}
-	return false
+	return true
+
 }
 
-func checkAlplow(r rune) bool {
+func checkLowerCase(r rune) bool {
 	if r >= 'a' && r <= 'z' {
 		return true
 	}
 	return false
-}
-
-func StrLenAlplow(str string) int {
-	var count int
-	strAsByte := []rune(str)
-	for index := range strAsByte {
-		count = index + 1
-	}
-	return count
 }
