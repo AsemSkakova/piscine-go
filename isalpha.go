@@ -20,12 +20,3 @@ func checkAlpNum(r rune) bool {
 	}
 	return false
 }
-
-// func strLenAlp (str string) int {
-// 	var count int
-// 	a := []rune(str)
-// 	for index  := range a {
-// count = index +1
-// 	}
-// 	return count
-// }

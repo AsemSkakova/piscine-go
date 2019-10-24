@@ -1,31 +1,21 @@
 package piscine
 
 func IsNumeric(str string) bool {
-	sAsRune := []rune(str)
-	counter := 0
-	for _, letter := range sAsRune {
-		if checkNum(letter) {
-			counter++
+
+	a := []rune(str)
+	for _, letter := range a {
+		if isNumeric(letter) == false {
+			return false
 		}
 	}
-	if counter == StrLenNum(str) {
-		return true
-	}
-	return false
+	return true
+
 }
 
-func checkNum(r rune) bool {
+func isNumeric(r rune) bool {
 	if r >= '0' && r <= '9' {
 		return true
 	}
 	return false
-}
 
-func StrLenNum(str string) int {
-	var count int
-	strAsByte := []rune(str)
-	for index := range strAsByte {
-		count = index + 1
-	}
-	return count
 }
