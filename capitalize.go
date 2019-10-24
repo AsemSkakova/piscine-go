@@ -21,7 +21,7 @@ func Capitalize(s string) string {
 }
 
 func checkAlpNum(r rune) bool {
-	if r >= 'A' && r <= 'Z' || r >= 'a' && r <= 'z' || r >= 0 && r <= 9 {
+	if r >= 'A' && r <= 'Z' || r >= 'a' && r <= 'z' || r >= '0' && r <= '9' {
 		return true
 	}
 	return false
