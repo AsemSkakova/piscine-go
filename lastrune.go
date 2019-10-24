@@ -2,9 +2,11 @@ package piscine
 
 func LastRune(s string) rune {
 	strAsRune := []rune(s)
-	var nrune rune
-	for _, letter := range strAsRune {
-		nrune = letter
+	//var nrune rune
+	counter := 0
+	for range strAsRune {
+		//nrune = letter
+		counter++
 	}
-	return nrune
+	return strAsRune[counter-1]
 }
